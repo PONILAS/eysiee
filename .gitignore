@@ -1,0 +1,12 @@
+db.sqlite3
+geckodriver.log
+_pycache_
+*.pyc
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+db.sqlite3-journal
+media
+static

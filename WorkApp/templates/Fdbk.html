@@ -1,0 +1,121 @@
+<style>
+	*
+/*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins',sans-serif;
+	box-sizing: border-box;
+	outline: solid;*/
+/*}
+section
+{
+	position: center;
+	height: 100%;
+	width: 100%;
+	background: #ffa07a;*/
+}
+/*body
+{
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	/*justify-content: center;*/
+}*/
+.container
+{
+	width: 360px;
+	background: #gray;
+	/*box-shadow: 0 0 8px rgba(250,250,250,0.6);
+	opacity: 0.6;
+*/}
+.container form
+{
+	width: 95%;
+	position: center;
+	padding: 25px 20px;
+}
+form h1
+{
+	padding: 10px 0;
+	text-align: center;
+}
+form .id
+{
+	position: relative;
+}
+.id i
+{
+	position: absolute;
+	font-size: 20px;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+}
+form input
+{
+	width: 100%;
+	height: 50px;
+	margin: 4px 0;
+	border: 1px solid black;
+	border-radius: 3px;
+	background: lightgray;
+	padding: 0 15px;
+	padding-right: 45px;
+	font-size: 20px;
+}
+form textarea
+{
+	padding: 5 15px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background: lightgray;
+	padding: 0 15px;
+	padding-right: 45px;
+	font-size: 20px;
+	width: 100%;
+	margin: 4px 0;
+}
+form button
+{
+	margin-top: 5px;
+	border: 1px solid black;
+	background: #lightgray;
+	color: #222;
+	padding: 10px 0;
+	width: 100%;
+	font-size: 20px;
+	font-weight: 800;
+	cursor: pointer;
+	border-radius: 3px;
+}
+</style>
+
+{% extends 'template.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block content %}
+	<title>TrabaHunters-Feedback</title>
+	<!-- <link rel="stylesheet" href="static/css/styles1.css"> -->
+	<script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+</head>
+<body>
+	<section></section>
+	<div class="container">
+		<form>
+			<h1>Give Us Your Feedback</h1>
+			<div class="id">
+				<input type="text" placeholder="Full Name">
+				<i class="far fa-user"></i>
+			</div>
+			<div class="id">
+				<input type="email" placeholder="Email Address">
+				<i class="far fa-envelope"></i>
+			</div>
+			<textarea cols="15" rows="5" placeholder="Enter Your Comments Here"></textarea>
+			<button>Send</button>
+		</form>
+	</div>
+</body>
+</html>
+{% endblock %}

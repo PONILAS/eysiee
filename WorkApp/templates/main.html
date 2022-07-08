@@ -1,0 +1,25 @@
+{% extends 'template.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block content %}
+	<title>TrabaHunters</title>
+	<!-- <link rel="stylesheet" href="static/css/style.css"> -->
+</head>
+
+<body>
+
+	<div class="title">
+		<h1>" Welcome Job Hunters! "</h1>
+		<h2>Let's Make your first step towards your Dream Job...</h2>
+	</div>
+	<div class="button">
+		<br>
+				<br>		<br>		<br>
+						<br>		<br>		<br>
+		<a href="{% url 'Sampleresume' %}" class="btn">FIND JOB</a>
+		<a href="{% url 'Tips' %}" class="btn">TIPS</a>
+	</div>
+</body>
+</html>
+{% endblock %}
