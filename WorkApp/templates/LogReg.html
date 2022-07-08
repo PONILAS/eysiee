@@ -1,0 +1,159 @@
+<style>
+	*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body
+{
+	background-color: white;
+	color: black;
+}
+.registration-page
+{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	transform: translate(-20%, -20%);
+	width: 100px;
+}
+.registration-page h1
+{
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 50px 100;
+/*	font-style: cursive;*/
+}
+
+.registration-page h3
+{
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 40px 100;
+}
+.registration-page p
+{
+	font-size: 20px;
+	margin: 20px 3;
+	width: 300px;
+	margin: 10px 100;
+}
+.registration-page input
+{
+	font-size: 16px;
+	padding: 15px 10px;
+	width: 300px;
+	border: 0;
+	border-radius: 10px;
+	outline: solid;
+	margin: 1px 100;
+}
+.registration-page button
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 20px 140;
+	padding: 10px 15px;
+	width: 200px;
+	border: 0;
+	border-radius: 5px;
+	background-color: gray;
+}
+.registration-page button:hover
+{
+	color: white;
+}
+</style>
+
+{% extends 'template.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block content %}
+	<title>Registration</title>
+	<!-- <link rel="stylesheet" href="static/css/styles.css"> -->
+</head>
+<body>
+	<div class="registration-page">
+
+					<br>
+					<br>
+					<br>
+					<br>	
+					<br>
+					<br>
+					<br>
+					<br>	
+					<br>
+					<br>
+					<br>	
+		<h1>Registration</h1>
+<!-- 		{% for  message in messages %}<br>
+                <h3>{{message}}</h3>
+                 {% endfor %}
+ -->
+		 {% if Reg_info_edit %}
+		 		<form action="{% url 'update_reg' Reg_info_edit.id %}" method="POST">
+					{% csrf_token %}
+
+					<p>Last Name</p>
+					<input type="text" value = "{{Reg_info_edit.Alastname}}" name="Alastname" placeholder="Enter your Last Name here." required>
+					<p>First Name</p>
+					<input type="text" value = "{{Reg_info_edit.Afirstname}}" name="Afirstname" placeholder="Enter your First Name here." required>
+					<p>Middle Name</p>
+					<input type="text" value = "{{Reg_info_edit.Amiddlename}}" name="Amiddlename" placeholder="Enter your Middle Name here." required>
+					<p>Birth Date</p>
+					<input type="text" value = "{{Reg_info_edit.Abday}}" name="Abday" placeholder="Enter your BirthDate here." required>
+					<p>Email Address</p>
+					<input type="text" value = "{{Reg_info_edit.Aemailadd}}" name="Aemailadd" placeholder="Enter your Email Address here." required>
+					<p>Contact Number</p>
+					<input type="text" value = "{{Reg_info_edit.Acontactnum}}" name="Acontactnum" placeholder="Enter your Contact Number here." required>
+					<br>
+					<br>
+					<button type="submit" class="submit-btn">Register</button>
+					
+					</form>	
+					</div>
+
+		 {% else %}
+				<form action="{% url 'Register' %}" method="POST">
+					{% csrf_token %}
+					
+					<p>Last Name</p>
+					<input type="text" name="Alastname" placeholder="Enter your Last Name here." required>
+					<p>First Name</p>
+					<input type="text" name="Afirstname" placeholder="Enter your First Name here." required>
+					<p>Middle Name</p>
+					<input type="text" name="Amiddlename" placeholder="Enter your Middle Name here." required>
+					<p>Birth Date</p>
+					<input type="text" name="Abday" placeholder="Enter your BirthDate here." required>
+					<p>Email Address</p>
+					<input type="text" name="Aemailadd" placeholder="Enter your Email Address here." required>
+					<p>Contact Number</p>
+					<input type="text" name="Acontactnum" placeholder="Enter your Contact Number here." required>
+					<br>
+					<br>
+					<button type="submit" class="submit-btn">Register</button>
+
+					<br>
+					<br>
+					<br>
+				{% for  message in messages %}<br>
+                <h3>{{message}}</h3>
+                 {% endfor %}
+
+					<br>	
+					<br>
+					<br>
+					<br>
+					</form>	
+					</div>
+	{% endif %}
+	</div>
+	
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,127 @@
+<style>
+table
+{
+  border:  5px solid;
+}
+h1
+{
+  text-align: center;
+  font-size: 50px;
+}
+td
+{
+  text-align: center;
+  border-collapse: collapse;
+  width: 10%;
+  height: 70px;
+}
+</style>
+
+{% extends 'template.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  {% block content %}
+  <title>TrabaHunters</title>
+  <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+</head>
+<body>
+  <!-- <div class="jb"> -->
+        <h1>JOB SELECTIONS</h1>
+      <br><br>
+      <table>
+        <tr>
+          <!-- <td>
+            <img src="/home/acey/myproj/static/images/Accountant.jpeg" height="200" width="300">
+          </td> -->
+          <td>
+            <p>JUNIOR ACCOUNTANT</p>
+            <p>Makati, NCR</p>
+        <!--     <p>Overseeing day-to-day transaction 
+            processing of the company subsidiaries 
+            including accounts payables and general 
+            accounting. - Responsible for updating 
+            and maintaining accounting records 
+            (general ledger, books of accounts, etc.) 
+            using Quickbooks and other accounting software.</p> -->
+            <p>FULL-TIME</p> 
+            <button position="center" type="submit" class="submit-btn"><a href="{% url 'Register' %}">Apply Now</button>
+          </td>         
+          <td>
+            <!-- <img src="/home/acey/myproj/static/images/construction.jpeg" height="200" width="300"> -->
+            <p>CONSTRUCTION MANAGER</p>
+            <p>Makati, NCR</p>
+            <!-- <p>This professional will be responsible 
+            for overseeing multiple projects at once, 
+            and serving as the representative at each 
+            worksite in dealings with subcontractors, 
+            suppliers, customers, and government 
+            inspectors.</p> -->
+            <p>PROJECT-BASED</p>
+            <button position="center" type="submit" class="submit-btn"><a href="{% url 'Register' %}">Apply Now</button>
+          </td>
+          <td>
+            <!-- <img src="/home/acey/myproj/static/images/crew.jpeg" height="200" width="300"> -->
+            <p>PROGRAMMER</p>
+            <p>Caloocan, NCR</p>
+         <!--    <p>Conducts store inventory according to 
+            set procedures and guidelines. Follows set 
+            guidelines on receiving and storing products. 
+            Lifts and carries cases of goods and beverage 
+            items and arrange accordingly.</p> -->
+            <p>FULL-TIME</p>
+            <button position="center" type="submit" class="submit-btn"><a href="{% url 'Register' %}">Apply Now</button>
+          </td>
+          <td>
+            <!-- <img src="/home/acey/myproj/static/images/programmer.jpeg" height="200" width="300"> -->
+            <p>STORE CREW</p>
+            <p>Caloocan, NCR</p>
+            <!-- <p>Job Qualifications: 
+            Bachelor's Degree in Computer 
+            Science/Information Technology or equivalent 
+            At least 1-2 years working experience in 
+            an IT industry</p> -->
+            <p>PROJECT-BASED</p>
+            <button position="center" type="submit" class="submit-btn"><a href="{% url 'Register' %}">Apply Now</button>
+          </td>
+          <td>
+            <!-- <img src="/home/acey/myproj/static/images/sales.jpeg" height="200" width="300"> -->
+            <p>TECHNICAL SALES EXECUTIVE</p>
+            <p>Makati, NCR</p>
+            <!-- <p>Technical Sales Executive Responsibilities: 
+            Sourcing potential new customers. 
+            Maintaining regular contact with 
+            existing customers. 
+            Traveling to the customer's location 
+            to talk about our product range. 
+            Demonstrating the technical features 
+            and benefits of our products. 
+            Advising customers on technology 
+            upgrades and related products.</p> -->
+            <p>FULL-TIME</p>
+            <button position="center" type="submit" class="submit-btn"><a href="{% url 'Register' %}">Apply Now</button>
+          </td>
+          <td>
+            <!-- <img src="/home/acey/myproj/static/images/call.jpeg" height="200" width="300"> -->
+            <p>CALL CENTER AGENT - CUSTOMER RESERVATION</p>
+            <p>Quezon City, NCR</p>
+            <!-- <p>Campaign: American Reservations Account 
+            The Ship to Shore Coordinator will utilize 
+            their superior customer service skills to 
+            build rapport, recommend, confirm, and manage 
+            gift orders, dining and dietary requests, shore 
+            excursions, onboard cabanas, and ancillary s
+            ervices. They are a knowledgeable resource for 
+            travel advisors, consumers and guests while 
+            providing quality information on all calls. 
+            They will also maintain the department's 
+            telephone service level goals.</p> -->
+            <p>FULL-TIME</p>
+            <button  position="center" type="submit" class="submit-btn"><a href="{% url 'Register' %}">Apply Now</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    </body>
+</html>
+{% endblock %}

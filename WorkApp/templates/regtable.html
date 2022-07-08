@@ -1,0 +1,60 @@
+{% extends 'template.html' %}
+{% block content %}
+
+<style>
+	table, th, td {
+		border:  1px solid;
+		border-collapse: collapse;}
+	</style>
+
+	<br>
+	<br>
+	<br>
+
+<center>
+<table id="myTable" style="width: 90%">
+			<thead>
+
+      			<tr>
+			        <th align="center" height="50" 
+                width="100">No</th>
+			        <th align="center" height="50" 
+                width="100">Last Name</th>
+			        <th align="center" height="50" 
+                width="100">First Name</th>
+			        <th align="center" height="50" 
+                width="100">Middle Name</th>
+			        <th align="center" height="50" 
+                width="100">Birthdate</th>
+			        <th align="center" height="50" 
+                width="100">Email</th>
+			        <th align="center" height="50" 
+                width="100">Contact</th>
+			        <th align="center" height="50" 
+                width="100">Edit</th>
+			        <th align="center" height="50" 
+                width="100">Delete</th>
+      			</tr>
+    		</thead>
+		{% for item in reg %}
+		<tbody>
+			<tr>
+				<td align="center" height="50">{{forloop.counter}}</td>
+				<td align="center" height="50">{{item.Alastname}} </td> 
+				<td align="center" height="50">{{item.Afirstname}} </td>
+				<td align="center" height="50">{{item.Amiddlename}} </td> 
+				<td align="center" height="50">{{item.Abday}} </td> 
+				<td align="center" height="50">{{item.Aemailadd}} </td> 
+				<td align="center" height="50">{{item.Acontactnum}} </td> 
+				<td align="center" height="50"><a href="{% url 'edit_reg' item.id %}">Update</a></td>
+				<td align="center" height="50"><a href="{% url 'delete_workapp' item.id %}">Delete</a></td>
+			</tr>
+		</tbody>
+			{% endfor %}
+				
+	</table>
+
+</center>
+{% endblock %}
+
+			

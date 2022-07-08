@@ -1,0 +1,81 @@
+<style>
+*
+{
+  font-family: 'Finlandica', sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.section
+{
+  background-color: white;
+}
+/*.container
+{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+.content-section
+{
+  float: left;
+  width: 40%;
+}*/
+h1
+{
+  text-transform: uppercase;
+  font-size: 50px;
+  margin: 10px 30;
+  width: 95%;
+}
+h3
+{
+  /*margin: 20px;*/
+  color: black;
+  font-size: 25px;
+  margin: 10px 30;
+  width: 95%;
+}
+p
+{
+/*  margin-top: 10px;*/
+  /*font-family: sans-serif;*/
+  font-size: 15px;
+/*  line-height: 1.5;*/
+  margin: 10px 30;
+  width: 95%;
+}
+</style>
+
+{% extends 'template.html' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block content %}
+    <title>about us</title>
+    <link href="styles4.css" rel="stylesheet">
+  </head>
+  <body>
+      <h1>ABOUT US</h1>
+    <div class="section">
+      <!-- <div class="container">
+        <div class="content-section">
+          <div class="title">
+            <h1>ABOUT US</h1> -->
+    </div>
+          <div class="content">
+            <br>
+            <h3>Employment website for Job seekers</h3> 
+            <br>
+            <p>It is a website that deals specifically with employment or careers. Many employment websites are designed to allow employers to post job requirements for a position to be filled and are commonly known as job boards.
+            Our websites offer employer reviews, career and job-search advice, and describe different job descriptions or employers.
+            Through our website a prospective employee can locate and fill out a job application or submit resumes over the internet for the advertised position.
+            Trabahunters will be the solution for the growing problems in job mismatch in our country.
+            The mission of our website is to give jobs to those people whose unemployed and also helping them to find a job in a less hassle way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>TraBAGhanap Seekers</title>
+	</head>
+	<body>
+		<form method="POST">
+		{% csrf_token %}
+		<h1>Register Form</h1>
+		<label>FullName:</label><input type="text" id="FullName" size="20" name="FullName" placeholder="Enter your name here.">
+		<label>Email:</label><input type="text" id="Email" size="20" name="Email" placeholder="Enter your email here.">
+		<label>PhoneNumber:</label><input type="text" id="PhoneNumber" size="32" name="PhoneNumber" placeholder="Enter your phone number.">
+		<label>Gender:</label><input type="text" id="Gender" size="20" name="Gender" placeholder="Enter your gender.">
+		<label>Age:</label><input type="text" id="Age" size="20" name="Age" placeholder="Enter your age.">
+		<input id="btn"type="submit" name="btn" value="Submit"/>
+		</form>
+		<table id="SignUp">
+		{% for item in Mylist %}
+			<tr>
+				<td>{{forloop.counter}}: 
+			{{item.Aname}} </td> 
+				<td>{{item.Aemail}} </td>
+				<td>{{item.Aphonenumber}} </td> 
+				<td>{{item.Agender}} </td> 
+				<td>{{item.Aage}} </td> 
+			</tr>
+			{% endfor %}
+			
+				
+		</table>		
+	</body>	
+</html>
